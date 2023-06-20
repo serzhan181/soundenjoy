@@ -1,3 +1,4 @@
+import { Sidebar } from "../layout/sidebar";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -15,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Sidebar />
+        <div className="ml-48">{children}</div>
+      </body>
     </html>
   );
 }
